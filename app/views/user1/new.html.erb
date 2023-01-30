@@ -1,0 +1,29 @@
+
+<%= stylesheet_link_tag    :all %>
+
+<form action="/user1" accept-charset="UTF-8" method="post">
+  <input type="hidden" name="authenticity_token" value="...">
+
+  <div class="container">
+    <h1>Sign Up</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+  
+    <label for="user1_name"><b>Name</b></label><br>
+    <input type="text" name="user1[name]"  placeholder="Enter name "id="user1_name">
+
+
+
+    <label for="user1_email"><b>Email</b></label><br>
+    <input type="text" name="user1[email]"  placeholder="Enter email "id="user1_email" required>
+
+  <label for="user1_password"><b>Password</b></label><br>
+    <input type="password" name="user1[password]"  placeholder="Enter password "id="user1_password" required>
+
+    <div class="clearfix">
+      <button type="reset" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,24 @@
+
+
+<%= stylesheet_link_tag    :all %>
+
+<form action="/login" accept-charset="UTF-8" method="post">
+  <input type="hidden" name="authenticity_token" value="...">
+
+  <div class="container">
+    <h1>Login Here</h1>
+    <hr>
+    <label for="signup_email"><b>Email</b></label><br>
+    <input type="text" name="signup[email]"  placeholder="Enter email "id="signup_email" required>
+
+  <label for="signup_password"><b>Password</b></label><br>
+    <input type="password" name="signup[password]"  placeholder="Enter password "id="signup_password" required>
+  <%= link_to "Signup Here", new_user1_path %>
+
+    <div class="clearfix">
+      <button type="reset" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Login </button>
+    </div>
+  </div>
+
+</form>

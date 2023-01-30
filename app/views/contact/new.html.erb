@@ -1,0 +1,33 @@
+<form action="/contact" accept-charset="UTF-8" method="post">
+  <input type="hidden" name="authenticity_token" value="...">
+
+  <div>
+    <label for="contact_name">Name</label><br>
+    <input type="text" name="contact[name]" id="contact_name" >
+  </div>
+
+  
+  <div>
+    <label for="contact_email">Email</label><br>
+    <input type="text" name="contact[email]" id="contact_email">
+  </div>
+
+  
+  <div>
+    <label for="contact_mobile_number">Mobile.no</label><br>
+    <input type="text" name="contact[mobile_number]" id="contact_mobile_number">
+  </div>
+
+  <div>
+    <label for="contact_address">Address</label><br>
+    <input type="text" name="contact[address]" id="contact_address">
+  </div>
+    
+    
+    <input type="hidden" name="contact[user1_id]" value=<%= session[:current_user_id]%>>
+  
+
+  <div>
+    <input type="submit" name="commit" value="add contacts" data-disable-with="Create Contacts">
+  </div>
+</form>
