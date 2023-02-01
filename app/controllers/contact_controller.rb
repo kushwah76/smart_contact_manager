@@ -18,7 +18,6 @@ class ContactController < ApplicationController
   end
   def create
 
-    puts "name----#{params[:contact][:profile_image]}"
     @contact=Contact.create(contact_params)
     puts @contact.save
     

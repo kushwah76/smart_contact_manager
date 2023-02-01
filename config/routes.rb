@@ -10,8 +10,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
 
   # root "users#index"
-  begin
-    puts "okkkkkkkkkkkkkkkkkkkkkk"
+
     resources :contact
     root "user1#index"
   
@@ -19,10 +18,6 @@ Rails.application.routes.draw do
     get "/index" , to: "contact#index"
     resources :user1
       
-  rescue => exception
-    puts "okkkkkkkkkkkkkkkkklllllllllllllllllllkkkkk"
-
-    
-  end
+  
   
 end
