@@ -26,7 +26,6 @@ tr:nth-child(even) {
 </head>
 <body>
 
-<h2>HTML Table</h2>
 
 <table>
   <tr>
@@ -34,16 +33,27 @@ tr:nth-child(even) {
     <th>Email</th>
     <th>Mobile.no</th>
       <th>Address</th>
+      <th>image</th>
       <th>Action</th>
+      
 
 
   </tr>
      <%@contact.each do |contact|%>
   <tr>
+
+    
     <td><%=contact.name%></td>
     <td><%=contact.email%></td>
     <td><%=contact.mobile_number%></td>
     <td><%=contact.address%></td>
+    <td><% if contact.profile_image.persisted?%>
+    <%=image_tag contact.profile_image,style:"width:100px;display:block"%>
+    <%end%></td>
+    <td><%= link_to "Edit", edit_contact_path(contact) %>   <%= link_to "Delete", contact_path(contact), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></td>
 
   </tr>
   <%end%>

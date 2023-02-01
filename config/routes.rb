@@ -10,11 +10,19 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
 
   # root "users#index"
-  resources :contact
-  root "user1#index"
+  begin
+    puts "okkkkkkkkkkkkkkkkkkkkkk"
+    resources :contact
+    root "user1#index"
+  
+    post  "/login" , to: "user1#login"
+    get "/index" , to: "contact#index"
+    resources :user1
+      
+  rescue => exception
+    puts "okkkkkkkkkkkkkkkkklllllllllllllllllllkkkkk"
 
-  post  "/login" , to: "user1#login"
-  get "/index" , to: "contact#index"
-  resources :user1
+    
+  end
   
 end
