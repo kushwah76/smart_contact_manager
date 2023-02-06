@@ -2,12 +2,12 @@ class User1Controller < ApplicationController
   def index
   end
 
-  def show 
-    byebug
+  # def show 
+  #   # byebug
 
-    @user = User1.find(params[:id])
+  #   @user = User1.find(params[:id])
 
-  end
+  # end
  
   def login
     puts "email #{ params[:signup][:email]}"

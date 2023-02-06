@@ -10,14 +10,21 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
 
   # root "users#index"
-   get "/contact/:id" , to: "contact#show"
-    resources :contacts
-    root "user1#index"
-  
-    post  "/login" , to: "user1#login"
-    get "/index" , to: "contact#index"
-    resources :user1
-      
-  
+
+
+
+    
+        root "user1#index"
+        get "user1/index"
+        get "contact/index"
+        post  "/login" , to: "user1#login"
+        get "/index" , to: "contact#index"
+        get "/tesing", to:"user1#tesing"
+        get "/logout", to:"user1#logout"
+        resources :user1
+        resources :contact
+
+        # match '*unmatched', to: 'application#not_found_method', via: :all
+
   
 end
