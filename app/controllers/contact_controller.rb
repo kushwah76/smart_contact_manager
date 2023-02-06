@@ -8,6 +8,7 @@ class ContactController < ApplicationController
   
   end
   def show
+    byebug
     @contact = Contact.find(params[:id])
   end
 
